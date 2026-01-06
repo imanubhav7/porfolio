@@ -14,6 +14,16 @@ const NavBar = () => {
         return () => window.removeEventListener('scroll', handleScroll)
     },[])
 
+    //Hire me Btn 
+    const handleClick = () => {
+        const email = "Vishwakarmaanubhav409@gmail.com";
+    const subject = "Interested in Hiring You";
+    const body = "Hi, I came across your portfolio and would like to connect.";
+
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+    window.open(gmailUrl, "_blank");
+    }
 
   return (
     <header className= {`navbar ${scrolled ? 'top-0 bg-black' : 'top-0 md:top-10  bg-transparent'}`}>
@@ -36,11 +46,11 @@ const NavBar = () => {
             </ul>
         </nav>
 
-        <a href="" className="contact-btn group">
+        <button onClick={handleClick} className="contact-btn group">
             <div className="bg-white px-5 py-2 rounded-lg text-black group-hover:bg-black-50 transition-colors duration-300 hover:scale-105 ">
                 <span className="group-hover:text-white transition-colors duration-300">Hire Me</span>
             </div>
-        </a>
+        </button>
       </div>
     </header>
   );

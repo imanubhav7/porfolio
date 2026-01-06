@@ -77,10 +77,10 @@ const Experience = () => {
                 className="flex flex-col-reverse xl:flex-row xl:gap-20 gap-10 justify-between"
               >
                 {/* GlowCard  */}
-                <div className="xl:w-2/6">
+                <div className="xl:w-2/6 flex justify-center">
                   <GlowCard card={card} idx={idx}>
                     <div>
-                      <img className="h-10" src={card.imgPath} alt={card.title} />
+                      <img className="h-[500px]" src={card.imgOnly} alt={card.title} />
                     </div>
                   </GlowCard>
                 </div>

@@ -62,11 +62,24 @@ const Hero = () => {
               Hi, I’m Anubhav — a developer crafting modern web applications
               with clarity and care.
             </p>
-            <Button
-              className="md:w-80 md:h-16 w-80 h-12"
-              // id="button"
+            
+           
+
+
+              <Button
+               className="md:w-80 md:h-16 w-80 h-12"
+               id="button" 
               text="Resume"
-            />
+              href="https://drive.google.com/file/d/1rjIO7AKyXmwYHAU5c8fZAkyutmLCm2gZ/view?usp=sharing"
+              >
+                
+              </Button>
+            
+              
+             
+              
+         
+              
           </div>
         </header>
 
@@ -78,7 +91,7 @@ const Hero = () => {
         </figure>
       </div>
       {/* Counter Component  */}
-      <AnimatedCounter/>
+      {/* <AnimatedCounter/> */}
     </section>
   );
 };

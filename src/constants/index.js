@@ -113,34 +113,35 @@ const techStackImgs = [
 ];
 
 const techStackIcons = [
+    {
+    name: "JavaScript",
+    modelPath: "/models/javascript.glb",
+    scale: 0.2,
+    rotation: [0, 0, 0],
+  },
   {
-    name: "React Developer",
+    name: "ReactJs",
     modelPath: "/models/react_logo-transformed.glb",
     scale: 1,
     rotation: [0, 0, 0],
   },
   {
-    name: "Python Developer",
-    modelPath: "/models/python-transformed.glb",
-    scale: 0.8,
+    name: "NextJs",
+    modelPath: "/models/NextJS.glb",
+    scale: 0.2,
     rotation: [0, 0, 0],
   },
   {
-    name: "Backend Developer",
+    name: "NodeJS",
     modelPath: "/models/node-transformed.glb",
     scale: 5,
     rotation: [0, -Math.PI / 2, 0],
   },
+
   {
-    name: "Interactive Developer",
-    modelPath: "/models/three.js-transformed.glb",
-    scale: 0.05,
-    rotation: [0, 0, 0],
-  },
-  {
-    name: "Project Manager",
-    modelPath: "/models/git-svg-transformed.glb",
-    scale: 0.05,
+    name: "MongoDB",
+    modelPath: "/models/MongoDB.glb",
+    scale: 0.4,
     rotation: [0, -Math.PI / 4, 0],
   },
 ];
@@ -151,12 +152,16 @@ const expCards = [
     imgPath: "/images/exp1.png",
     logoPath: "/images/JPL_logo.png",
     title: "Frontend Developer",
-    date: "January 2023 - Present",
+    date: "Decenber 2023 - Present",
     responsibilities: [
-      "Developed and maintained user-facing features for the Hostinger website.",
-      "Collaborated closely with UI/UX designers to ensure seamless user experiences.",
-      "Optimized web applications for maximum speed and scalability.",
+      "Developed reusable and modular React components, improving maintainability and reducing new feature development time by 25%.",
+      "Built interactive and responsive UIs using React.js, Next.js, Tailwind CSS, and modern CSS practices.",
+      "Optimized front-end performance using lazy loading, memoization, and efficient state updates, resulting in a 30% faster initial load time.",
+      "Integrated frontend applications with RESTful APIs using Fetch and Axios with proper error handling and loading states.",
+      "Utilized React Hooks (useState, useEffect, custom hooks) for clean state management, reducing redundant re-renders by 20%.",
+      "Implemented client-side and server-side rendering (CSR/SSR) strategies using Next.js for better SEO and performance."
     ],
+    imgOnly:"./images/exp_img.jfif"
   },
   // {
   //   review: "Adrian’s contributions to Docker's web applications have been outstanding. He approaches challenges with a problem-solving mindset.",

@@ -5,6 +5,8 @@ import Projects from './components/sections/Projects'
 import NavBar from './components/NavBar'
 import Experience from './components/sections/Experience'
 import QuoteSection from './components/QuoteSection'
+import TechStack from './components/sections/TechStack'
+import Contact from './components/sections/Contact'
 
 
 const App = () => {
@@ -18,8 +20,10 @@ const App = () => {
   <NavBar/>
    <Hero/>
    <Projects/>
+   {/* <QuoteSection/> */}
    <Experience/>
-   <QuoteSection/>
+   <TechStack/>
+   <Contact/>
   </>
   )
 }

@@ -1,10 +1,9 @@
 import React from "react";
 
-const Button = ({text,className,id}) => {
+const Button = ({text,className,id,href}) => {
 
-  return (
-    <a 
-    onClick={(e)=> {
+  const handleClick = (e) => {
+        if(target){
         e.preventDefault()
         const target = document.getElementById('counter')
         if(target && id){
@@ -12,9 +11,16 @@ const Button = ({text,className,id}) => {
           const top = target.getBoundingClientRect().top + window.scrollY - offset;
           window.scrollTo({top, behavior: 'smooth'})
         }
+      }
+    
+  }
 
-    }}
-    href="" className={`${className ?? ""} cta-wrapper`}>
+  return (
+    <a 
+    onClick={handleClick}
+    href={href || "#"}
+     target={href ? "_blank" : undefined}
+    className={`${className ?? ""} cta-wrapper`}>
       <div className="cta-button group">
         <div className="bg-circle"/>
         <p className="text">{text}</p>
