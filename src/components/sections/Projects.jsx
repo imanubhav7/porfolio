@@ -2,6 +2,7 @@ import React, { useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useGSAP } from '@gsap/react'
+import TitleHeader from '../TitleHeader'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -41,8 +42,8 @@ const Projects = () => {
   },[])
 
   return (
-    <section id='project' ref={sectionRef} className='app-showcase'>
-      <div className='w-full'>
+    <section id='project' ref={sectionRef} className='app-showcase ' >
+      <div className='w-full '>
         <div className='showcaselayout '>
 
             {/* left  */}
@@ -51,7 +52,8 @@ const Projects = () => {
                         <img src='/images/Project01.png' alt='CoachAI'/>
                     </div>
                     <div className='space-y-5 mt-5'>
-                      <h2 className='text-xl md:text-3xl lg:text-4xl font-bold'>CoachAI - Built to Shape Confidence, Clarity, and Readiness for the Moments That Define Careers</h2>
+                      <h2 className='text-lg md:text-2xl lg:text-3xl'>
+                        <a href="https://github.com/imanubhav7/CoachAI" target='blank' className='text-4xl font-bold '>CoachAI</a>- Built to Shape Confidence, Clarity, and Readiness for the Moments That Define Careers</h2>
 
                       <p className='text-white-50 md:text-xl'>Developed with Next.js and Tailwind CSS, with Gemini API integration, Clerk authentication and Prisma ORM</p>
                     </div>
@@ -64,7 +66,7 @@ const Projects = () => {
                     <div className='image-wrapper bg-[#ffefdb] p-2'>
                         <img src="/images/project2.png" alt="Cloud Vault" className='xl:rounded-4xl'  />
                     </div>
-                    <h2>Cloud Vault</h2>
+                    <h2> <a href="https://github.com/imanubhav7/CloudVault" target='blank' >Cloud Vault</a></h2>
                 </div>
                 <div className='project ' ref={project3Ref}>
                     <div className='image-wrapper bg-[#ffefdb]'>

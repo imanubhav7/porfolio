@@ -7,6 +7,7 @@ import Experience from './components/sections/Experience'
 import QuoteSection from './components/QuoteSection'
 import TechStack from './components/sections/TechStack'
 import Contact from './components/sections/Contact'
+import Footer from './components/sections/Footer'
 
 
 const App = () => {
@@ -24,6 +25,7 @@ const App = () => {
    <Experience/>
    <TechStack/>
    <Contact/>
+   <Footer/>
   </>
   )
 }

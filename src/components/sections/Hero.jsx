@@ -67,7 +67,7 @@ const Hero = () => {
 
 
               <Button
-               className="md:w-80 md:h-16 w-80 h-12"
+               className="md:w-60 md:h-16 w-80 h-12"
                id="button" 
               text="Resume"
               href="https://drive.google.com/file/d/1rjIO7AKyXmwYHAU5c8fZAkyutmLCm2gZ/view?usp=sharing"

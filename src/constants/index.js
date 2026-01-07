@@ -253,18 +253,21 @@ const socialImgs = [
   {
     name: "insta",
     imgPath: "/images/insta.png",
+    imgLink: "https://www.instagram.com/im_anubhav7_/?hl=en"
   },
   {
-    name: "fb",
-    imgPath: "/images/fb.png",
+    name: "github",
+    imgPath: "/images/github.png",
+    imgLink: "https://github.com/imanubhav7"
   },
-  {
-    name: "x",
-    imgPath: "/images/x.png",
-  },
+  // {
+  //   name: "x",
+  //   imgPath: "/images/x.png",
+  // },
   {
     name: "linkedin",
     imgPath: "/images/linkedin.png",
+    imgLink: "https://www.linkedin.com/in/anubhav-vishwakarma-14273929a/"
   },
 ];
 

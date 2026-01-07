@@ -43,7 +43,7 @@ import { useMediaQuery } from 'react-responsive'
 import { Room } from './Room'
 import HeroLights from './HeroLights'
 
-/* -------------------- Controls Component -------------------- */
+
 const Controls = ({ isTablet }) => {
   const { invalidate } = useThree()
 
@@ -61,18 +61,18 @@ const Controls = ({ isTablet }) => {
   )
 }
 
-/* -------------------- Main Component -------------------- */
+//  Main render 
 const HeroExpi = () => {
   const isTablet = useMediaQuery({ query: '(max-width: 1024px)' })
   const isMobile = useMediaQuery({ query: '(max-width: 768px)' })
 
   return (
     <Canvas
-      frameloop="demand" // 🔥 stops 60fps rendering
-      dpr={[1, 1.5]} // 🔥 limits pixel ratio
+      frameloop="demand" // 
+      dpr={[1, 1.5]} // 
       camera={{ position: [0, 0, 15], fov: 45 }}
       gl={{
-        antialias: false, // 🔥 cheaper render
+        antialias: false, //
         powerPreference: 'high-performance'
       }}
     >

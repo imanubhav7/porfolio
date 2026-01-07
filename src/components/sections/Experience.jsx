@@ -78,7 +78,7 @@ const Experience = () => {
               >
                 {/* GlowCard  */}
                 <div className="xl:w-2/6 flex justify-center">
-                  <GlowCard card={card} idx={idx}>
+                  <GlowCard card={card} idx={idx} >
                     <div>
                       <img className="h-[500px]" src={card.imgOnly} alt={card.title} />
                     </div>
