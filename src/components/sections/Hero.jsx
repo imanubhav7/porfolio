@@ -20,7 +20,7 @@ const Hero = () => {
         stagger: 0.2,
         duration: 2,
         ease: "power2.inOut",
-      }
+      },
     );
   });
 
@@ -62,24 +62,13 @@ const Hero = () => {
               Hi, I’m Anubhav — a developer crafting modern web applications
               with clarity and care.
             </p>
-            
-           
 
-
-              <Button
-               className="md:w-60 md:h-16 w-80 h-12"
-               id="button" 
+            <Button
+              className="md:w-60 md:h-16 w-80 h-12"
+              id="button"
               text="Resume"
               href="https://drive.google.com/file/d/1friB8W4ZM4pZhyDPrYuQ5fufPLmFyGXw/view?usp=sharing"
-              >
-                
-              </Button>
-            
-              
-             
-              
-         
-              
+            ></Button>
           </div>
         </header>
 

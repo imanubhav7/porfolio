@@ -25,28 +25,28 @@ const Experience = () => {
       });
     });
 
-    
 
-    gsap.to('.timeline',{
+
+    gsap.to('.timeline', {
       transformOrigin: 'bottom bottom',
       ease: 'power1.inOut',
-      scrollTrigger:{
+      scrollTrigger: {
         trigger: '.timeline',
         start: 'top center',
         end: '70% center',
         onUpdate: (self) => {
-          gsap.to('.timeline',{
+          gsap.to('.timeline', {
             scaleY: 1 - self.progress,
           })
         }
       },
     });
 
-      gsap.utils.toArray(".expText").forEach((text) => {
+    gsap.utils.toArray(".expText").forEach((text) => {
       gsap.from(text, {
         xPercent: 0,
         opacity: 0,
-    
+
         duration: 1,
         ease: "power2.inOut",
         scrollTrigger: {
@@ -55,7 +55,7 @@ const Experience = () => {
         },
       });
     });
-  
+
   }, []);
 
   return (

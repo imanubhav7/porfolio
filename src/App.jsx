@@ -12,21 +12,21 @@ import Footer from './components/sections/Footer'
 
 const App = () => {
   return (
-  <>
-  <Snowfall
-  snowflakeCount={100}
-  speed={[0.3, 3]}
-  wind={[0.5, 0.3]}
-  />
-  <NavBar/>
-   <Hero/>
-   <Projects/>
-   {/* <QuoteSection/> */}
-   <Experience/>
-   <TechStack/>
-   <Contact/>
-   <Footer/>
-  </>
+    <>
+      <Snowfall
+        snowflakeCount={100}
+        speed={[0.3, 3]}
+        wind={[0.5, 0.3]}
+      />
+      <NavBar />
+      <Hero />
+      <Projects />
+      {/* <QuoteSection/> */}
+      <Experience />
+      <TechStack />
+      <Contact />
+      <Footer />
+    </>
   )
 }
 

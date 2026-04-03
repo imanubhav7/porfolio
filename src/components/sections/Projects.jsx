@@ -1,87 +1,115 @@
-import React, { useRef } from 'react'
-import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { useGSAP } from '@gsap/react'
-import TitleHeader from '../TitleHeader'
+import React, { useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+import TitleHeader from "../TitleHeader";
 
-gsap.registerPlugin(ScrollTrigger)
+gsap.registerPlugin(ScrollTrigger);
 
 const Projects = () => {
-  const sectionRef = useRef(null)
-  const project1Ref = useRef(null)
-  const project2Ref = useRef(null)
-  const project3Ref = useRef(null)
+  const sectionRef = useRef(null);
+  const project1Ref = useRef(null);
+  const project2Ref = useRef(null);
+  const project3Ref = useRef(null);
 
-  
-  
-  
   useGSAP(() => {
-    const projects = [project1Ref.current,project2Ref.current,project3Ref.current]
-  gsap.fromTo(sectionRef.current, 
-    {opacity:0},
-    {opacity:1, duration:1.5}
-  )
-   projects.forEach((card,idx) => {
+    const projects = [
+      project1Ref.current,
+      project2Ref.current,
+      project3Ref.current,
+    ];
+    gsap.fromTo(
+      sectionRef.current,
+      { opacity: 0 },
+      { opacity: 1, duration: 1.5 },
+    );
+    projects.forEach((card, idx) => {
       gsap.fromTo(
         card,
         {
-          y:50, opacity:0 
+          y: 50,
+          opacity: 0,
         },
         {
-          y:0,
-          opacity:1,
-          duration:1,
-          delay:0.3 * (idx+1),
-          scrollTrigger:{
-            trigger:card,
-            start:'top bottom-=100'
-          }
-        }
-      )
-  })
-  },[])
+          y: 0,
+          opacity: 1,
+          duration: 1,
+          delay: 0.3 * (idx + 1),
+          scrollTrigger: {
+            trigger: card,
+            start: "top bottom-=100",
+          },
+        },
+      );
+    });
+  }, []);
 
   return (
-    <section id='project' ref={sectionRef} className='app-showcase ' >
-      <div className='w-full '>
-        <div className='showcaselayout '>
-
-            {/* left  */}
-                <div className='first-project-wrapper ' ref={project1Ref}>
-                    <div className='image-wrapper'>
-                        <img src='/images/Project01.png' alt='CoachAI'/>
-                    </div>
-                    <div className='space-y-5 mt-5'>
-                      <h2 className='text-lg md:text-2xl lg:text-3xl'>
-                        <a href="https://github.com/imanubhav7/CoachAI" target='blank' className='text-4xl font-bold '>CoachAI</a>- Built to Shape Confidence, Clarity, and Readiness for the Moments That Define Careers</h2>
-
-                      <p className='text-white-50 md:text-xl'>Developed with Next.js and Tailwind CSS, with Gemini API integration, Clerk authentication and Prisma ORM</p>
-                    </div>
-                </div>
-
-            {/* right  */}
-            
-            <div className='project-list-wrapper  overflow-hidden'>
-                <div className='project '  ref={project2Ref}>
-                    <div className='image-wrapper bg-[#ffefdb] p-2'>
-                        <img src="/images/project2.png" alt="Cloud Vault" className='xl:rounded-4xl'  />
-                    </div>
-                    <h2> <a href="https://github.com/imanubhav7/CloudVault" target='blank' >Cloud Vault</a></h2>
-                </div>
-                <div className='project ' ref={project3Ref}>
-                    <div className='image-wrapper bg-[#ffefdb]'>
-                        <img src="/images/project3.png" alt="EatBuzz" />
-                    </div>
-                    <h2>Project2</h2>
-                </div>
-
+    <section id="project" ref={sectionRef} className="app-showcase ">
+      <div className="w-full ">
+        <div className="showcaselayout ">
+          {/* left  */}
+          <div className="first-project-wrapper " ref={project1Ref}>
+            <div className="image-wrapper">
+              <a href="https://github.com/imanubhav7/CoachAI" target="blank">
+                <img src="/images/Project01.png" alt="CoachAI" />
+              </a>
             </div>
-           
-        </div>
+            <div className="space-y-5 mt-5">
+              <h2 className="text-lg md:text-2xl lg:text-3xl">
+                <a
+                  href="https://github.com/imanubhav7/CoachAI"
+                  target="blank"
+                  className="text-4xl font-bold "
+                >
+                  CoachAI
+                </a>
+                - Built to Shape Confidence, Clarity, and Readiness for the
+                Moments That Define Careers
+              </h2>
 
+              <p className="text-white-50 md:text-xl">
+                Developed with Next.js and Tailwind CSS, with Gemini API
+                integration, Clerk authentication and Prisma ORM
+              </p>
+            </div>
+          </div>
+
+          {/* right  */}
+
+          <div className="project-list-wrapper  overflow-hidden">
+            <div className="project " ref={project2Ref}>
+              <div className="image-wrapper bg-[#ffefdb] p-2">
+                <a target="blank">
+                  {" "}
+                  <img
+                    src="/images/project2.png"
+                    alt="Cloud Vault"
+                    className="xl:rounded-4xl"
+                  />
+                </a>
+              </div>
+              <h2>
+                {" "}
+                <a
+                  target="blank"
+                  href="https://github.com/imanubhav7/CloudVault"
+                >
+                  Cloud Vault
+                </a>
+              </h2>
+            </div>
+            {/* <div className='project ' ref={project3Ref}>
+              <div className='image-wrapper bg-[#ffefdb]'>
+                <img src="/images/project3.png" alt="EatBuzz" />
+              </div>
+              <h2>Project2</h2>
+            </div> */}
+          </div>
+        </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Projects
+export default Projects;
